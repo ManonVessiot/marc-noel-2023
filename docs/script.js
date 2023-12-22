@@ -1,43 +1,6 @@
 function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} // Made by Yago Estévez (Twitter: @yagoestevez.com)
 
 
-/***********************
-  Menu Component
- ***********************/
-
-const Menu = props => {
-  return /*#__PURE__*/(
-    React.createElement("div", { className: `menu-container ${props.showMenu}` }, /*#__PURE__*/
-    React.createElement("div", { className: "overlay" }), /*#__PURE__*/
-    React.createElement("div", { className: "menu-items" }, /*#__PURE__*/
-    React.createElement("ul", null, /*#__PURE__*/
-    React.createElement("li", null, /*#__PURE__*/
-    React.createElement("a", { href: "#welcome-section", onClick: props.toggleMenu }, "HOME")), /*#__PURE__*/
-
-
-
-    React.createElement("li", null, /*#__PURE__*/
-    React.createElement("a", { href: "#about", onClick: props.toggleMenu }, "ABOUT")), /*#__PURE__*/
-
-
-
-    React.createElement("li", null, /*#__PURE__*/
-    React.createElement("a", { href: "#projects", onClick: props.toggleMenu }, "PORTFOLIO")), /*#__PURE__*/
-
-
-
-    React.createElement("li", null, /*#__PURE__*/
-    React.createElement("a", { href: "#contact", onClick: props.toggleMenu }, "CONTACT"))), /*#__PURE__*/
-
-
-
-
-    React.createElement(SocialLinks, null))));
-
-
-
-};
-
 
 /***********************
   Nav Component
@@ -48,15 +11,11 @@ const Nav = props => {
     React.createElement(React.Fragment, null, /*#__PURE__*/
     React.createElement("nav", { id: "navbar" }, /*#__PURE__*/
     React.createElement("div", { className: "nav-wrapper" }, /*#__PURE__*/
-    React.createElement("p", { className: "brand" }, "yago", /*#__PURE__*/
+    React.createElement("p", { className: "brand" }, "Manon", /*#__PURE__*/
 
-    React.createElement("strong", null, "est\xE9vez")), /*#__PURE__*/
+    React.createElement("strong", null, "Vessiot")), /*#__PURE__*/
 
-    React.createElement("a", {
-      onClick: props.toggleMenu,
-      className: props.showMenu === 'active' ? 'menu-button active' : 'menu-button' }, /*#__PURE__*/
-
-    React.createElement("span", null))))));
+    React.createElement("span", null)))));
 
 
 
@@ -576,26 +535,12 @@ const SocialLinks = props => {
   Main Component
  ***********************/
 
-class App extends React.Component {constructor(...args) {super(...args);_defineProperty(this, "state",
-    {
-      menuState: false });_defineProperty(this, "toggleMenu",
-
-
-    () => {
-      this.setState(state => ({
-        menuState: !state.menuState ?
-        'active' :
-        state.menuState === 'deactive' ?
-        'active' :
-        'deactive' }));
-
-    });}
+class App extends React.Component {constructor(...args) {super(...args);}
 
   render() {
     return /*#__PURE__*/(
       React.createElement(React.Fragment, null, /*#__PURE__*/
-      React.createElement(Menu, { toggleMenu: this.toggleMenu, showMenu: this.state.menuState }), /*#__PURE__*/
-      React.createElement(Nav, { toggleMenu: this.toggleMenu, showMenu: this.state.menuState }), /*#__PURE__*/
+      React.createElement(Nav, null), /*#__PURE__*/
       React.createElement(Header, null), /*#__PURE__*/
       React.createElement(About, null), /*#__PURE__*/
       React.createElement(Projects, null), /*#__PURE__*/
